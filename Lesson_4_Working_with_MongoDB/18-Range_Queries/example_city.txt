@@ -1,4 +1,5 @@
-{'areaCode': ['916'],
+{
+ 'areaCode': ['916'],
  'areaLand': 109271000.0,
  'country': 'United States',
  'elevation': 13.716,
@@ -14,4 +15,5 @@
  'population': 155937,
  'postalCode': '95624 95757 95758 95759',
  'timeZone': ['Pacific Time Zone'],
- 'utcOffset': ['-7', '-8']}
+ 'utcOffset': ['-7', '-8']
+}

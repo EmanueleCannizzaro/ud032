@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+
 # Your task here is to extract data from xml on authors of an article
 # and add it to a list, one item for an author.
 # See the provided data structure for the expected format.
@@ -17,15 +18,21 @@ def get_root(fname):
 
 def get_authors(root):
     authors = []
+    data = {
+        "fnm": None,
+        "snm": None,
+        "email": None,
+        "insr": []
+    }
     for author in root.findall('./fm/bibl/aug/au'):
-        data = {
-                "fnm": None,
-                "snm": None,
-                "email": None,
-                "insr": []
-        }
 
         # YOUR CODE HERE
+        data["fnm"] = author.find('./fnm').text
+        data["snm"] = author.find('./snm').text
+        data["email"] = author.find('./email').text
+        insr = author.findall('./insr')
+        for i in insr:
+            data["insr"].append(i.attrib["iid"])
 
         authors.append(data)
 

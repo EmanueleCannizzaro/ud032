@@ -1,12 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 # Please note that the function 'make_request' is provided for your reference only.
-# You will not be able to to actually use it from within the Udacity web UI
+# You will not be able to to actually use it from within the Udacity web UI.
+# Your task is to process the HTML using BeautifulSoup, extract the hidden
+# form field values for "__EVENTVALIDATION" and "__VIEWSTATE" and set the appropriate
+# values in the data dictionary.
 # All your changes should be in the 'extract_data' function
 
 from bs4 import BeautifulSoup
 import requests
-import json
 
 html_page = "page_source.html"
 
@@ -16,7 +19,12 @@ def extract_data(page):
             "viewstate": ""}
     with open(page, "r") as html:
         # do something here to find the necessary values
-        pass
+        soup = BeautifulSoup(html, "lxml")
+        ev = soup.find(id='__EVENTVALIDATION')
+        data['eventvalidation'] = ev['value']
+
+        vs = soup.find(id='__VIEWSTATE')
+        data['viewstate'] = vs['value']
 
     return data
 
@@ -26,14 +34,14 @@ def make_request(data):
     viewstate = data["viewstate"]
 
     r = requests.post("http://www.transtats.bts.gov/Data_Elements.aspx?Data=2",
-                    data={'AirportList': "BOS",
-                          'CarrierList': "VX",
-                          'Submit': 'Submit',
-                          "__EVENTTARGET": "",
-                          "__EVENTARGUMENT": "",
-                          "__EVENTVALIDATION": eventvalidation,
-                          "__VIEWSTATE": viewstate
-                    })
+                      data={'AirportList': "BOS",
+                            'CarrierList': "VX",
+                            'Submit': 'Submit',
+                            "__EVENTTARGET": "",
+                            "__EVENTARGUMENT": "",
+                            "__EVENTVALIDATION": eventvalidation,
+                            "__VIEWSTATE": viewstate
+                            })
 
     return r.text
 
@@ -44,5 +52,5 @@ def test():
     assert data["eventvalidation"].startswith("/wEWjAkCoIj1ng0")
     assert data["viewstate"].startswith("/wEPDwUKLTI")
 
-    
+
 test()

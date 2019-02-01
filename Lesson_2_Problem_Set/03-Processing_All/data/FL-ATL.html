@@ -5,7 +5,7 @@
 <head><title>
 	Data Elements
 </title>
-    
+
     <script type="text/javascript" src="lib/topNavBar.js"></script>
 	<script type="text/javascript" src="lib/no_ms.js"></script>
 	<link rel="shortcut icon" href="favicon.ico" /><link href="styles/global.css" REL="stylesheet" TYPE="text/css" /><link rel="stylesheet" type="text/css" href="styles/local_Top_nav_main.css" /><link rel="stylesheet" type="text/css" href="styles/rita_main.css" />
@@ -15,7 +15,7 @@ function window_CarrierList(page)
 {
     //aUrl="CarrierList.asp?xpage=" + xPage + "&flag=" + flag;
     aUrl="CarrierList.aspx?page=" + page;
-  
+
 	windef="Height=750,width=600,Left=0,Top=0,dependent=yes,resizable=Yes, scrollbars=yes";
     objWindow = window.open("","Subwindow", windef);
 	objWindow.location.href=aUrl;
@@ -27,7 +27,7 @@ function window_CarrierList_Foreign()
 {
     //aUrl="CarrierList.asp?xpage=" + xPage + "&flag=" + flag;
     aUrl="CarrierList_Foreign.aspx";
-  
+
 	windef="Height=700,width=580,Left=0,Top=0,dependent=yes,resizable=Yes, scrollbars=yes";
     objWindow = window.open("","Subwindow", windef);
 	objWindow.location.href=aUrl;
@@ -196,7 +196,7 @@ function window_CarrierList_Foreign()
  <!--nir <div class="topPrint" style='font-size:10pt;'>&nbsp;<a href="http://www.rita.dot.gov">RITA</a> > <a href="http://www.bts.gov/">BTS</a></div>-->
 
   <div class="topBcrumbs">&nbsp;<a href="http://www.rita.dot.gov">RITA</a> > <a href="http://www.rita.dot.gov/bts/">BTS</a></div>
-  <div class="topPrint"style='font-size:10pt;'>&nbsp;</div>
+  <div class="topPrint" style='font-size:10pt;'>&nbsp;</div>
 
  <div id="topGrayLine"></div>
 
@@ -221,12 +221,12 @@ function window_CarrierList_Foreign()
 	<td style='text-align:left;'>
 		<Table style="margin-right:3px;">
 <tr><td><a href="homepage.asp" ><img src="images/smalltop.gif" style="border:0px" alt="transtats logo" ></a></td></tr>
-	<FORM name='searchForm'  METHOD=POST ACTION='Search.asp'  >
+	<FORM name='searchForm'  METHOD=POST ACTION='Search.asp'>
 <TR><TD style='text-align:left;padding-left:10px;padding-top:2px;'><LABEL FOR='txtSearch'>
 		<a class=tsslcLbl style='color: #000000;text-decoration:none;' href='javascript:displayHelp(300,450,"SITESEARCH")'>Search this site:</a></LABEL></td></tr><tr><td style='padding-left:5px' nowrap>
 		<INPUT class=slcBox TYPE='text' name='txtSearch' id='txtSearch' size=16 style='width:110px;height:20;vertical-align:bottom;'>&nbsp;
 		<Button TYPE='submit'  style='font-size:6.5pt;height:20;width=24;vertical-align:middle;' >Go</button></td>
-</TR>	
+</TR>
 	</FORM>
 <TR>
 <TD nowrap style='text-align:left;padding-left:10px;padding-top:2px;'><a class='finePrint' href="SearchInfo.asp">Advanced Search</a></TD>
@@ -238,7 +238,7 @@ function window_CarrierList_Foreign()
 <TD class="hspacing" style="background-color:#efefef;"></TD>
 </TR>
 <TR>
-<TD class="sidebarLink" onmouseover="toggleMenu(this,'Data Directory');return true;" 
+<TD class="sidebarLink" onmouseover="toggleMenu(this,'Data Directory');return true;"
 	onmouseout="toggleMenu(this,'');return true;"><A href="DataIndex.asp" style='color:#000000;text-decoration:none;'>Database Directory</A></TD>
 </TR>
 <TR>
@@ -257,57 +257,57 @@ function window_CarrierList_Foreign()
 <TR>
 <TD  class="sidebarTH2">By Mode</TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Aviation Mode');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Aviation Mode');return true;"
 onmouseout="window.status='';toggleMenu(this,'Aviation Mode');return true;"><A href="databases.asp?Mode_ID=1&Mode_Desc=Aviation&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Aviation</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Maritime Mode');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Maritime Mode');return true;"
 onmouseout="toggleMenu(this,'Maritime Mode');return true;"><A href="databases.asp?Mode_ID=2&Mode_Desc=Maritime&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Maritime</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Highway Mode');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Highway Mode');return true;"
 	onmouseout="toggleMenu(this,'Highway Mode');return true;"><A href="databases.asp?Mode_ID=3&Mode_Desc=Highway&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Highway</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Transit Mode');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Transit Mode');return true;"
 	onmouseout="toggleMenu(this,'Transit Mode');return true;"><A href="databases.asp?Mode_ID=4&Mode_Desc=Transit&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Transit</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Rail Mode');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Rail Mode');return true;"
 	onmouseout="toggleMenu(this,'Rail Mode');return true;"><A href="databases.asp?Mode_ID=5&Mode_Desc=Rail&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Rail</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Pipeline Mode');return true;"  
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Pipeline Mode');return true;"
 	onmouseout="toggleMenu(this,'Pipeline Mode');return true;"><A href="databases.asp?Mode_ID=6&Mode_Desc=Pipeline&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Pipeline</A></TD>
 </TR>
-<TR><TD class="sidebarLink" 
+<TR><TD class="sidebarLink"
 	onmouseover="toggleMenu(this,'Bike/Pedestrian Mode');return true;" onmouseout="toggleMenu(this,'Bike/Pedestrian Mode');return true;"><A href="Databases.asp?Mode_ID=7&Mode_Desc=Bike/Pedestrian&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Bike/Pedestrian</A></TD></TR>
-<TR><TD class="sidebarLink" 
+<TR><TD class="sidebarLink"
 	onmouseover="toggleMenu(this,'Other Mode');return true;"  onmouseout="toggleMenu(this,'Other Mode');return true;" ><A href="Databases.asp?Mode_ID=99&Mode_Desc=Other&Subject_ID2=0" style='color:#000000;text-decoration:none;'>Other</A></TD>
 </TR>
 <TR>
 <TD  class="sidebarTH2">By Subject</TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Safety subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Safety subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=1&Subject_Desc=Safety&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Safety</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Freight Transportation subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Freight Transportation subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=2&Subject_Desc=Freight%20Transport&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Freight Transport</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Passenger Travel subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Passenger Travel subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=3&Subject_Desc=Passenger%20Travel&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Passenger Travel</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Infrastructure subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Infrastructure subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=4&Subject_Desc=Infrastructure&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Infrastructure</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Economic/Financial subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Economic/Financial subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=5&Subject_Desc=Economic/Financial&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Economic/Financial</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Social/Demographic subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Social/Demographic subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=6&Subject_Desc=Social/Demographic&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Social/Demographic</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Energy subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Energy subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=7&Subject_Desc=Energy&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Energy</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Environment subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'Environment subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=8&Subject_Desc=Environment&Mode_ID2=0" style='color:#000000;text-decoration:none;'>Environment</A></TD>
 </TR>
-<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'National Security subject');return true;" 
+<TR><TD class="sidebarLink"  onmouseover="toggleMenu(this,'National Security subject');return true;"
 	onmouseout="toggleMenu(this,'');return true"><A href="databases.asp?Subject_ID=9&Subject_Desc=National%20Security&Mode_ID2=0" style='color:#000000;text-decoration:none;'>National Security</A></TD>
 </TR>
 <TR>
@@ -315,7 +315,7 @@ onmouseout="toggleMenu(this,'Maritime Mode');return true;"><A href="databases.as
 <TR>
 <TR>
 </TABLE>
- 
+
 	</td>
 </tr>
 </table>
@@ -325,15 +325,15 @@ onmouseout="toggleMenu(this,'Maritime Mode');return true;"><A href="databases.as
     <table  width='720px' style='margin-top:15px;'>
         <tr><th  style="text-align:center;font-weight:800;font-size:16pt;font-family : arial; height: 26px;">
             <span id="LblHeader" style="display:inline-block;width:720px;text-align:center;font-weight:800;font-size:16pt;font-family : arial;">Flights</span></th>
-            
+
         </tr>
 		<tr><th  style='text-align:center;font-weight:800;font-size:16pt;font-family : arial;'>
             <span id="LblSelection" style="display:inline-block;width:720px;text-align:center;font-weight:800;font-size:16pt;font-family : arial;">All Carriers - All Airports </span></th>
-            
+
         </tr>
         <tr><th  style='text-align:center;font-weight:800;font-size:12pt;font-family:arial;'></th></tr>
     </table>
-    
+
     <form name="form1" method="post" action="Data_Elements.aspx?Data=2" id="form1">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
@@ -363,7 +363,7 @@ function __doPostBack(eventTarget, eventArgument) {
 	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWjAkC5fzrvQ4Clfa57AICjvDy6wsCs/yZsQgCstbN9wQCt9ap9wQC" />
 </div>
     <table  width='720px' >
-             
+
         <tr>
             <td  class="dataTD" style="width: 450px" ><label for="CarrierList">
                  Select a carrier from the dropdown (major carriers) or from a link below: </label>
@@ -372,7 +372,7 @@ function __doPostBack(eventTarget, eventArgument) {
                   Select an airport: </label>
 	        </td>
 			<td></td>
-   	    </tr>  
+   	    </tr>
 	    <tr>
 	        <td style="width: 450px">
 	            <select name="CarrierList" id="CarrierList" class="slcBox" style="width:450px;">
@@ -397,9 +397,9 @@ function __doPostBack(eventTarget, eventArgument) {
 	<option value="VX">Virgin America</option>
 
 </select>
-	        
+
 	        </td>
-	        
+
 	        <td style="width: 250px">
 	            <select name="AirportList" id="AirportList" class="slcBox" style="width:250px;">
 	<option selected="selected" value="All">All</option>
@@ -421,14 +421,14 @@ function __doPostBack(eventTarget, eventArgument) {
   <option value="ABR"> - Aberdeen, SD: Aberdeen Regional</option>
   <option value="ABI"> - Abilene, TX: Abilene Regional</option>
 </select>
-	        
+
 	        </td>
-	       
+
 	        <td>
 				<input type="submit" name="Submit" value="Submit" id="Submit" style="width:50px;" />
-	    
+
 	        </td>
-	    </tr>   
+	    </tr>
 	    <tr>
 			<td style="width: 450px; height: 15px;">
 				<a class="dataTD" style="font-size:9px;" href="javascript:window_CarrierList(1)" >U.S.
@@ -440,19 +440,19 @@ function __doPostBack(eventTarget, eventArgument) {
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a id="Link_Destination" class="dataTDRight" href="javascript:__doPostBack('Link_Destination','')" style="display:inline-block;width:61px;font-size:9px;">Destination</a></td><td style="height: 15px">
 			</td>
 		</tr>
-		       
+
      </table>
      <table width='720px' id="myNote" >
         <tr>
             <td  class='dataTD' style="font-size:9px;padding-bottom:0px;padding-left:5px;margin:5px;" >* All numbers are for scheduled services.</td>
-        </tr> 
+        </tr>
         <tr>
-            <td  class='dataTD' style="font-size:9px;padding-bottom:0px;padding-left:5px;margin:5px;" >* Most recent three months of international data by airport and by carrier withheld 
+            <td  class='dataTD' style="font-size:9px;padding-bottom:0px;padding-left:5px;margin:5px;" >* Most recent three months of international data by airport and by carrier withheld
             because of confidentiality agreements for individual routes. Summary totals are shown for all airports and all carriers. Foreign point-to-point totals not included. For U.S. carrier summary system and international numbers including foreign point-to-point and the foreign point-to-point totals, see <a href="http://www.bts.gov/press_releases/airline_traffic_data.html">BTS monthly air traffic press releases</a>
 			</td>
         </tr>
      </table>
-     
+
      <table id="tblNote" border="0" style="width:750px;">
 	<tr>
 		<td class="dataTD" style="font-size:9px;padding-bottom:0px;padding-left:5px;margin:5px;">
@@ -460,7 +460,7 @@ function __doPostBack(eventTarget, eventArgument) {
               </td>
 	</tr>
 </table>
-     
+
      <table id="tblNote2" border="0" style="width:750px;">
 	<tr>
 		<td class="dataTD" style="font-size:9px;padding-bottom:0px;padding-left:5px;margin:5px;">
@@ -468,7 +468,7 @@ function __doPostBack(eventTarget, eventArgument) {
               </td>
 	</tr>
 </table>
-	 
+
      <table Width='750px'>
      <tr>
      	<td  Class='dataTD' style="font-size:9px;">
@@ -476,7 +476,7 @@ function __doPostBack(eventTarget, eventArgument) {
      	</td>
      </tr>
      </table>
-     
+
 	 <table width="750px">
 	 	<tr>
 			<td align=right>
@@ -485,8 +485,8 @@ function __doPostBack(eventTarget, eventArgument) {
 		</tr>
 		<tr><td height="5px"></td></tr>
 	 </table>
-	 
-            	    
+
+
         <a id="Link_Passengers" class="dataTD" href="javascript:__doPostBack('Link_Passengers','')">Passengers</a>
 		&nbsp;<a id="Link_Flights" disabled="disabled" class="dataTD">Flights</a>
         &nbsp;<a id="Link_RPM" class="dataTD" href="javascript:__doPostBack('Link_RPM','')">Revenue Passenger-Miles</a>
@@ -494,7 +494,7 @@ function __doPostBack(eventTarget, eventArgument) {
         &nbsp;<a id="Link_LoadFactor" class="dataTD" href="javascript:__doPostBack('Link_LoadFactor','')">Load Factor</a>
         &nbsp;<a id="Link_Operating_PL" class="dataTD" href="javascript:__doPostBack('Link_Operating_PL','')">Net Income</a>
         &nbsp;<a id="Link_Operating_R" class="dataTD" href="javascript:__doPostBack('Link_Operating_R','')">Operating Revenue</a>
-		
+
 		<table class="dataTDRight" cellspacing="1" cellpadding="4" rules="all" border="1" id="DataGrid1" style="width:750px;">
 	<tr class="libraryTHY2_Center" style="color:White;background-color:#5D95C9;">
 		<td>Year</td><td>Month</td><td>DOMESTIC</td><td>INTERNATIONAL</td><td>TOTAL</td>
@@ -509,10 +509,10 @@ function __doPostBack(eventTarget, eventArgument) {
 	</tr>
 </table>
         <span id="LblRecord" style="display:inline-block;width:500px;text-align:left;font-weight:800;font-size:12pt;font-family : arial;"></span>
-        <span id="lblUnit" class="dataTD"></span>   
-        <span id="lblSource" class="dataTD"><BR>SOURCE: Bureau of Transportation Statistics T-100 Segment data.</span>           
+        <span id="lblUnit" class="dataTD"></span>
+        <span id="lblSource" class="dataTD"><BR>SOURCE: Bureau of Transportation Statistics T-100 Segment data.</span>
     </form>
- 
+
 </td>
 </tr>
 

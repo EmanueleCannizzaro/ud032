@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+
 """
 Your task is to process the supplied file and use the csv module to extract data from it.
 The data comes from NREL (National Renewable Energy Laboratory) website. Each file
@@ -13,6 +14,7 @@ You can use the csv modules "reader" method to get data in such format.
 Another useful method is next() - to get the next line from the iterator.
 You should only change the parse_file function.
 """
+
 import csv
 import os
 
@@ -23,10 +25,14 @@ DATAFILE = "745090.csv"
 def parse_file(datafile):
     name = ""
     data = []
-    with open(datafile,'rb') as f:
-        pass
+    with open(datafile, 'rb') as f:
+        reader = csv.reader(f, delimiter=',')
+        name += reader.next()[1]
+        reader.next()  # skip header
+        for row in reader:
+            data.append(row)
     # Do not change the line below
-    return (name, data)
+    return name, data
 
 
 def test():

@@ -15,20 +15,22 @@ The following hints will help you solve this problem:
                   u'followers': 2597,
                   u'screen_name': u'marbles',
                   u'tweets': 12334}]}
+Note that you will need to create the fields 'followers', 'screen_name' and 'tweets'.
 
-Please modify only the 'make_pipeline' function so that it creates and returns an aggregation 
+Please modify only the 'make_pipeline' function so that it creates and returns an aggregation
 pipeline that can be passed to the MongoDB aggregate function. As in our examples in this lesson,
-the aggregation pipeline should be a list of one or more dictionary objects. 
+the aggregation pipeline should be a list of one or more dictionary objects.
 Please review the lesson examples if you are unsure of the syntax.
 
 Your code will be run against a MongoDB instance that we have provided. If you want to run this code
 locally on your machine, you have to install MongoDB, download and insert the dataset.
 For instructions related to MongoDB setup and datasets please see Course Materials.
 
-Please note that the dataset you are using here is a smaller version of the twitter dataset used 
-in examples in this lesson. If you attempt some of the same queries that we looked at in the lesson 
+Please note that the dataset you are using here is a smaller version of the twitter dataset used
+in examples in this lesson. If you attempt some of the same queries that we looked at in the lesson
 examples, your results will be different.
 """
+
 
 def get_db(db_name):
     from pymongo import MongoClient
@@ -36,20 +38,39 @@ def get_db(db_name):
     db = client[db_name]
     return db
 
+
 def make_pipeline():
     # complete the aggregation pipeline
-    pipeline = [ ]
+    pipeline = []
+    match = {'$match': {'user.time_zone': 'Brasilia',
+                        'user.statuses_count': {'$gt': 100}}}
+    pipeline.append(match)
+
+    project = {'$project': {'followers': '$user.followers_count',
+                            'screen_name': '$user.screen_name',
+                            'tweets': '$user.statuses_count'}}
+    pipeline.append(project)
+
+    sort = {'$sort': {'followers': -1}}
+    pipeline.append(sort)
+
+    limit = {'$limit': 1}
+    pipeline.append(limit)
+
     return pipeline
 
+
 def aggregate(db, pipeline):
-    result = db.tweets.aggregate(pipeline)
-    return result
+    return [doc for doc in db.tweets.aggregate(pipeline)]
+
 
 if __name__ == '__main__':
     db = get_db('twitter')
     pipeline = make_pipeline()
     result = aggregate(db, pipeline)
-    assert len(result["result"]) == 1
-    assert result["result"][0]["followers"] == 17209
     import pprint
+
     pprint.pprint(result)
+    assert len(result) == 1
+    assert result[0]["followers"] == 17209
+
